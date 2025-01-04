@@ -4,7 +4,7 @@ const Formulario = () => {
     const [materiaA, setMateriaA] = useState(0);
     const [materiaB, setMateriaB] = useState(0);
     const [materiaC, setMateriaC] = useState(0);
-    const [nome, setNome] = useState("");
+    const [nome, setNome] = useState('');
 
     // mount quando é montado
     // update quando é atualizado
@@ -45,6 +45,12 @@ const Formulario = () => {
 
     return (
         <form>
+            <ul>
+                {[1, 2, 3, 4, 5].map(item => (
+                        <li key={item}>{item}</li>
+                ))}
+            </ul>
+
             <input type="text" placeholder="Seu nome" onChange={alteraNome} />
             <input type="number" placeholder="Nota matéria A" onChange={({ target }) => setMateriaA(parseInt(target.value))} />
             <input type="number" placeholder="Nota matéria B" onChange={evento => setMateriaB(parseInt(evento.target.value))}/>
