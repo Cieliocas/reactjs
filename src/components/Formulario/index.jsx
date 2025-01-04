@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 
 const Formulario = () => {
-    let [materiaA, setMateriaA] = useState(0);
-    let [materiaB, setMateriaB] = useState(0);
-    let [materiaC, setMateriaC] = useState(0);
-    let [nome, setNome] = useState("");
+    const [materiaA, setMateriaA] = useState(0);
+    const [materiaB, setMateriaB] = useState(0);
+    const [materiaC, setMateriaC] = useState(0);
+    const [nome, setNome] = useState("");
+
+    // mount quando é montado
+    // update quando é atualizado
+    // unmount quando é desmontado
 
     useEffect(() => {
         console.log("O componente iniciou");
