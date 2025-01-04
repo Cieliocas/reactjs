@@ -7,8 +7,20 @@ const Formulario = () => {
     let [nome, setNome] = useState("");
 
     useEffect(() => {
-        console.log("O estado mudou");
-    });
+        console.log("O componente iniciou");
+
+        return () => {
+            console.log("O componente finalizou");
+        }
+    }, []);
+
+    useEffect(() => {
+        console.log("O estado nome mudou");
+    }, [nome]);
+
+    useEffect(() => {
+        console.log("O estado materiaA mudou p/: " + materiaA);
+    }, [materiaA]);
 
     const alteraNome = (evento) => {
 
