@@ -1,9 +1,11 @@
 import Perfil from "./components/Perfil/index";
+import Formulario from "./components/Formulario";
 
 function App() {
 	return(
 		<>
-			<Perfil />
+			<Perfil nome="Cielio" endereco="https://github.com/cieliocas.png"/>
+			<Formulario />
 		</>
 	)
 }
