@@ -19,11 +19,11 @@ const ReposList = () => {
         <>
             {loading && <h1>Carregando...</h1>}
             <ul>
-                {repos.map(repositorio => (
-                    <li key={repositorio.id}>
-                        <b>Nome: </b> {repositorio.name} <br />
-                        <b>Linguagem: </b> {repositorio.language} <br />
-                        <a target="_blank" href={repositorio.html_url}>Visitar no Github</a> <br />
+                {repos.map(({ id, name, language, html_url }) => (
+                    <li key={id}>
+                        <b>Nome: </b> {name} <br />
+                        <b>Linguagem: </b> {language} <br />
+                        <a target="_blank" href={html_url}>Visitar no Github</a> <br />
                     </li>
                 ))}
                 <li>Repositório</li>
